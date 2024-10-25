@@ -30,12 +30,10 @@ document.addEventListener('DOMContentLoaded', () => {
     
             const li = document.createElement('li');
             
-            // Create the task text
             const taskText = document.createElement('span');
             taskText.textContent = task.text;
-            taskText.classList.toggle('done', task.done);  // Add class 'done' if task is completed
+            taskText.classList.toggle('done', task.done);
     
-            // Create buttons for Done and Delete actions
             const doneBtn = document.createElement('button');
             doneBtn.textContent = task.done ? 'Undo' : 'Done';
             doneBtn.addEventListener('click', () => toggleTask(index));
@@ -44,7 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
             deleteBtn.textContent = 'Delete';
             deleteBtn.addEventListener('click', () => removeTask(index));
     
-            // Append task text and buttons to the list item
             const btnContainer = document.createElement('div');
             btnContainer.appendChild(doneBtn);
             btnContainer.appendChild(deleteBtn);
@@ -54,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
             taskList.appendChild(li);
     
-            if (!task.done) activeCount++;  // Count active tasks
+            if (!task.done) activeCount++;
         });
     
         taskCounter.innerText = `${activeCount} tasks left`;
