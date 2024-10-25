@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>To Do -Application</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="toDo">
+            <h1>Personal To-Do List maker</h1>
+            <!-- Create a list -->
+            <div class="createAList">
+                <input type="text" id="listNameInput" placeholder="Enter list name">
+                <button id="createListBtn">Create List</button>
+                <!-- Select a list -->
+                <select id="listSelect">
+                    <option value="" disabled selected>Select a list</option>
+                </select>
+            </div>
+
+            <!-- Add task to selected list -->
+            <div id="taskSection" style="display: none;">
+                <input type="text" id="taskInput" placeholder="Enter task">
+                <button id="addTaskBtn">Add Task</button>
+                <p id="errorMsg"></p>
+                <ul id="taskList"></ul>
+                <div class="task-footer">
+                    <p id="taskCounter">0 tasks left</p>
+                    <button id="showAllBtn">Show All</button>
+                    <button id="showActiveBtn">Show Active</button>
+                    <button id="showCompletedBtn">Show Completed</button>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
